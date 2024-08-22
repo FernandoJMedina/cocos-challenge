@@ -8,7 +8,7 @@ To set up the project:
 
 - react-router-dom
 - @tanstack/react-query
-- Redux toolkit
+- jotai
 - @testing-library/react
 - sass
-- mobile first
+- mobile first (without responsive)

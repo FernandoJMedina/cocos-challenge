@@ -1,0 +1,10 @@
+import { useQuery } from "@tanstack/react-query";
+import { TransactionsService } from "../../services/transactions";
+import { TRANSACTIONS_KEYS } from "../keys/transaction-keys";
+
+export function usePortfolio() {
+  return useQuery({
+    queryKey: TRANSACTIONS_KEYS.GET_PORTFOLIO,
+    queryFn: TransactionsService.getPortfolio,
+  });
+}

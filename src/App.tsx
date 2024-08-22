@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./routes/home";
-import Root from "./routes/root";
-import Search from "./routes/search";
+import Root from "./components/root/root";
+import Home from "./screens/home";
+import Search from "./screens/search";
 
 export default function App() {
   return (
