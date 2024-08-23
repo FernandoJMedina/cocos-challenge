@@ -9,7 +9,7 @@ export default function Root(props: PropsWithChildren) {
     <Layout>
       {props.children}
       <nav className={styles.nav}>
-        <NavLink className={styles.link} to="/home">
+        <NavLink className={styles.link} to="/">
           <FiHome size={18} /> Home
         </NavLink>
         <NavLink className={styles.link} to="/search">
