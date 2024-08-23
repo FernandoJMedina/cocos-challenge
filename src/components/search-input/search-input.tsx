@@ -30,7 +30,7 @@ export function SearchInput({ onSearch }: SearchInputProps) {
       <label>
         Instruments
         <input
-          placeholder="Search actives"
+          placeholder="Enter the ticker"
           type="text"
           {...register("search")}
         />

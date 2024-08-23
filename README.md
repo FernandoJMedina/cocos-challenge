@@ -9,6 +9,6 @@ To set up the project:
 - react-router-dom
 - @tanstack/react-query
 - jotai
-- @testing-library/react
+- vitest + @testing-library/react
 - sass
 - mobile first (without responsive)

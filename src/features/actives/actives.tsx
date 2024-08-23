@@ -1,4 +1,5 @@
 import { useSearchActives } from "../../api/queries/transactions/useSearchActives";
+import { InstrumentCard } from "../../components/instrument-card/instrument-card";
 import styles from "./actives.module.scss";
 
 type ActiveProps = {
@@ -18,7 +19,7 @@ export function Actives({ activeTerm }: ActiveProps) {
     return (
       <ul className={styles.list}>
         {data.map((i) => (
-          <li key={i.id}>{i.ticker}</li>
+          <InstrumentCard {...i} key={i.id} />
         ))}
       </ul>
     );

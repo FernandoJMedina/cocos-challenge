@@ -9,13 +9,16 @@ export function Portfolio() {
 
   if (isSuccess) {
     return (
-      <div className="feature">
-        <ul>
-          {data.map((item, idx) => (
-            <li key={`${item.ticker}-${idx}`}>{item.ticker}</li>
-          ))}
-        </ul>
-      </div>
+      <>
+        <h2 className="home-header">Portfolio</h2>
+        <div className="feature">
+          <ul>
+            {data.map((item, idx) => (
+              <li key={`${item.ticker}-${idx}`}>{item.ticker}</li>
+            ))}
+          </ul>
+        </div>
+      </>
     );
   }
 

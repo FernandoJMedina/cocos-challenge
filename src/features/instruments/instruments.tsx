@@ -1,4 +1,5 @@
 import { useInstruments } from "../../api/queries/transactions/useInstruments";
+import { InstrumentCard } from "../../components/instrument-card/instrument-card";
 
 export function Instruments() {
   const { data, isSuccess, isError } = useInstruments();
@@ -9,13 +10,16 @@ export function Instruments() {
 
   if (isSuccess) {
     return (
-      <div className="feature">
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>{item.ticker}</li>
-          ))}
-        </ul>
-      </div>
+      <>
+        <h2 className="home-header">Instruments</h2>
+        <div className="feature">
+          <ul>
+            {data.map((item) => (
+              <InstrumentCard key={item.id} {...item} />
+            ))}
+          </ul>
+        </div>
+      </>
     );
   }
 
