@@ -14,4 +14,58 @@
   height: 50%;
   border-top-left-radius: 1.6rem;
   border-top-right-radius: 1.6rem;
+  padding: 1.6rem;
+  display: flex;
+  justify-content: center;
+
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.header {
+  gap: 2rem;
+  display: flex;
+  position: relative;
+
+  button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+  .active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.form {
+  width: 100%;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  input {
+    width: 100%;
+    padding: 1rem 1.6rem;
+    border-radius: 8px;
+    font-size: 1.4rem;
+  }
+
+  button {
+    background-color: black;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
 }

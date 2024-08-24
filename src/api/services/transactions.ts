@@ -22,9 +22,10 @@ export async function searchActives(query: string) {
 }
 
 export async function createOrder(request: OrderRequest) {
-  const { data } = await API.post<OrderResponse>(RESOURSES.CREATE_ORDER, {
-    data: request,
-  });
+  const { data } = await API.post<OrderResponse>(
+    RESOURSES.CREATE_ORDER,
+    request
+  );
   return data;
 }
 
