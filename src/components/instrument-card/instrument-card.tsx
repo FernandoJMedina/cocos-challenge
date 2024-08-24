@@ -1,4 +1,5 @@
-import { Instrument } from "../../api/models/instrument";
+import { currencyFormat } from "../../../helpers/currency";
+import type { Instrument } from "../../api/models/instrument";
 import styles from "./instrument-card.module.scss";
 
 export function InstrumentCard({ ...props }: Instrument) {
@@ -13,12 +14,7 @@ export function InstrumentCard({ ...props }: Instrument) {
         <h4>{props.ticker}</h4>
       </div>
       <div>
-        <h3>
-          {props.last_price.toLocaleString("es-AR", {
-            style: "currency",
-            currency: "ARS",
-          })}
-        </h3>
+        <h3>{currencyFormat(props.last_price)}</h3>
         <h5 style={{ color }}>{instrumentReturn.toFixed(2)}%</h5>
       </div>
     </li>

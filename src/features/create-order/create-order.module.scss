@@ -1,0 +1,17 @@
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.container {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 50%;
+  border-top-left-radius: 1.6rem;
+  border-top-right-radius: 1.6rem;
+}

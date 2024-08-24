@@ -1,4 +1,5 @@
 import { usePortfolio } from "../../api/queries/transactions/usePortfolio";
+import { PortfolioCard } from "../../components/portfolio-card/portfolio-card";
 
 export function Portfolio() {
   const { data, isSuccess, isError } = usePortfolio();
@@ -14,7 +15,7 @@ export function Portfolio() {
         <div className="feature">
           <ul>
             {data.map((item, idx) => (
-              <li key={`${item.ticker}-${idx}`}>{item.ticker}</li>
+              <PortfolioCard key={`${item.ticker}-${idx}`} {...item} />
             ))}
           </ul>
         </div>

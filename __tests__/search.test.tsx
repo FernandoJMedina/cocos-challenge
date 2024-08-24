@@ -12,7 +12,7 @@ describe("searchActives", () => {
   test("input value", async () => {
     renderWithClient(<Search />);
 
-    const input = screen.getByPlaceholderText("Search actives");
+    const input = screen.getByPlaceholderText("Enter the ticker");
 
     await userEvent.type(input, activeTerm);
 

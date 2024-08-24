@@ -12,7 +12,7 @@ export function Instruments() {
     return (
       <>
         <h2 className="home-header">Instruments</h2>
-        <div className="feature">
+        <div className="feature spacer">
           <ul>
             {data.map((item) => (
               <InstrumentCard key={item.id} {...item} />

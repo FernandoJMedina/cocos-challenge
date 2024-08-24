@@ -1,6 +1,7 @@
-import { PropsWithChildren } from "react";
+import type { PropsWithChildren } from "react";
 import { FiHome, FiSearch } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { CreateOrder } from "../../features/create-order/create-order";
 import Layout from "../layout/layout";
 import styles from "./root.module.scss";
 
@@ -17,6 +18,7 @@ export default function Root(props: PropsWithChildren) {
           Search
         </NavLink>
       </nav>
+      <CreateOrder />
     </Layout>
   );
 }

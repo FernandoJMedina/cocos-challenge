@@ -1,21 +1,20 @@
-type SideType = "BUY" | "SELL";
-
 type BaseOrderRequest = {
   instrument_id: number;
-  side: SideType;
   quantity: number;
 };
 
-type MarketOrderRequest = BaseOrderRequest & {
+export type BuyOrderRequest = BaseOrderRequest & {
+  side: "BUY";
   type: "MARKET";
 };
 
-type LimitOrderRequest = BaseOrderRequest & {
+export type SellOrderRequest = BaseOrderRequest & {
+  side: "SELL";
   type: "LIMIT";
   price: number;
 };
 
-export type OrderRequest = MarketOrderRequest | LimitOrderRequest;
+export type OrderRequest = BuyOrderRequest | SellOrderRequest;
 
 type StatusOrderResponse = "PENDING" | "REJECTED" | "FILLED";
 
